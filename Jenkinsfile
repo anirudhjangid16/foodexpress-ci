@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'pip install pytest'
+                bat 'python -m pip install pytest'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'pytest'
+                bat 'python -m pytest'
             }
         }
     }
